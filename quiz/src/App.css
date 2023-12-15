@@ -1,0 +1,207 @@
+@font-face {
+  font-family: kbnormal;
+  src: url(./../src/assets/KGBlankSpace/KGBlankSpaceSolid.ttf);
+}
+@font-face {
+  font-family: kbsketch;
+  src: url(./../src/assets/KGBlankSpace/KGBlankSpaceSketch.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+#home-parent {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5vmax;
+}
+#home-parent > h1 {
+  font-size: 6vmax;
+  opacity: 0.8;
+  /* text-shadow: 2px 12px 15px #05044c; */
+  background: linear-gradient(90deg, #e9d022, #ffde04, #ff5653, #e60b09);
+  background-size: 300%;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: gradient-heading 10s linear infinite alternate;
+  font-family: kbnormal;
+}
+@keyframes gradient-heading {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 300%;
+  }
+}
+#home-parent > button {
+  /* background-color: rgba(255, 0, 0, 0.4); */
+  background-color: rgba(255, 255, 255, 0.275);
+  width: 6vmax;
+  height: 5vmin;
+  border-radius: 20px;
+  font-size: 3vmin;
+  transition: all 0.5s;
+  border: 0.3px solid white;
+}
+#home-parent > button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 0, 0, 0.6);
+  border: 0.3px solid red;
+}
+#quiz-parent {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#quiz-box {
+  width: 80vw;
+  height: 70vh;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6vmin;
+}
+#quiz-head {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 3vmin;
+  width: 100%;
+}
+#heading {
+  font-size: 3vmax;
+  font-family: kbsketch;
+}
+#q-num {
+  align-self: flex-start;
+}
+#question {
+  font-size: 1.3vmax;
+  font-family: kbnormal;
+}
+#options-div {
+  display: flex;
+  flex-direction: column;
+  gap: 3vmin;
+}
+.opt-row {
+  display: flex;
+  gap: 2vmax;
+}
+.option {
+  width: 20vw;
+  text-align: center;
+  background-color: #0659ae;
+  padding: 1vmin;
+  font-family: kbnormal;
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+.option:hover {
+  cursor: pointer;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background-color: #054b92;
+}
+#buttons {
+  display: flex;
+  gap: 3vmax;
+}
+#buttons > button {
+  padding: 1vmin;
+  border-radius: 10px;
+  border: 0.3px solid white;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  font-size: 2vmin;
+}
+#buttons > button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.next {
+  background-color: green;
+}
+.prev {
+  background-color: cornflowerblue;
+}
+.quit {
+  background-color: darkred;
+}
+#result-parent {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vmin;
+  gap: 7vmin;
+}
+#result-box {
+  width: 80vw;
+  height: 70vh;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 5vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+#tagline{
+    font-size: 1.3vmax;
+    font-family: kbnormal;
+}
+#score{
+    font-family: kbsketch;
+    font-size: 3vmax;
+}
+#stats{
+    /* margin-top: 10vmin; */
+    display: flex;
+    flex-direction: column;
+    gap: 4vmin;
+    width: 100%;
+}
+#stat{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: kbnormal;
+}
+.play-again{
+    background-color: #0659ae;
+}
+.home{
+    background-color: darkred;
+}
